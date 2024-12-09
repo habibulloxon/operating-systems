@@ -1,0 +1,123 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+*.cover
+*.py,cover
+.cache
+nosetests.xml
+coverage.xml
+*.coveragerc
+*.pytest_cache/
+*.mypy_cache/
+.mypy_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Pyre type checker
+.pyre/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs and Editors
+# VS Code
+.vscode/
+*.code-workspace
+# PyCharm
+.idea/
+*.iml
+# Vim
+*.swp
+*.swo
+# Emacs
+*~
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Ignore private data
+*.env
+
+# Ignore any other local config files
+*.local
+
+# Docker
+# Ignore Docker-specific files that may be generated
+docker-compose.override.yml
+.env.docker
+.dockerignore
+docker-compose.override.yml
+
+# Docker volumes
+**/volumes/
+
+# Docker build files
+**/Dockerfile.*
+*.tar
+*.gz
+
+# Ignore any build-specific files
+build/
+
+# Docker Compose logs
+docker-compose*.log
+compose.log
+
+# Ignore Docker logs
+*.log
+logs/

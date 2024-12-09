@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project of Habibulloxon Xayrulloxo'jayev</title>
+</head>
+<body>
+    <h1>Mini Project of Habibulloxon Xayrulloxo'jayev</h1>
+    <h2>Timetable</h2>
+    <table border="1">
+        <tr>
+            <th>Course Name</th>
+            <th>Day</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+        </tr>
+        {% for course in courses %}
+        <tr>
+            <td>{{ course[0] }}</td>
+            <td>{{ course[1] }}</td>
+            <td>{{ course[2] }}</td>
+            <td>{{ course[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
