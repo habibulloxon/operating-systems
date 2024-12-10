@@ -4,6 +4,7 @@ import os
 
 app = Flask(__name__)
 
+# Establish database connection
 conn = psycopg2.connect(
     dbname=os.getenv("DB_NAME"),
     user=os.getenv("DB_USER"),
@@ -15,15 +16,21 @@ cursor = conn.cursor()
 
 @app.route('/')
 def index():
-    level = request.args.get('level', 'Undergraduate') 
+    level = request.args.get('level', 1)
 
-    cursor.execute("SELECT course_name, day_of_week, start_time, end_time FROM courses WHERE level = %s", (level,))
+    cursor.execute("SELECT course_name, day, time, room, level FROM Timetable WHERE level = %s", (level,))
     courses = cursor.fetchall()
 
-    cursor.execute("SELECT DISTINCT level FROM courses")
+    cursor.execute("SELECT DISTINCT level FROM Timetable")
     levels = [row[0] for row in cursor.fetchall()]
     
-    return render_template('index.html', courses=courses, levels=levels, selected_level=level, student_name="Habibulloxon Xayrulloxo'jayev")
+    return render_template(
+        'index.html',
+        courses=courses,
+        levels=levels,
+        selected_level=level,
+        student_name="Habibulloxon Xayrulloxo'jayev"
+    )
 
 if __name__ == '__main__':
     app.run(debug=True)
