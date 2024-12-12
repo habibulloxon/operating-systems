@@ -16,7 +16,7 @@ cursor = conn.cursor()
 
 @app.route('/')
 def index():
-    level = request.args.get('level', 1)
+    level = int(request.args.get('level', 1))
 
     cursor.execute("SELECT course_name, day, time, room, level FROM Timetable WHERE level = %s", (level,))
     courses = cursor.fetchall()
@@ -29,7 +29,7 @@ def index():
         courses=courses,
         levels=levels,
         selected_level=level,
-        student_name="Habibulloxon Xayrulloxo'jayev"
+        student_name="Begzod Tokhirov"
     )
 
 if __name__ == '__main__':
