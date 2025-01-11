@@ -18,7 +18,7 @@ This is a simple Flask web application that displays a timetable retrieved from 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/timetable-app.git
+   git clone https://github.com/habibulloxon/timetable-app.git
    ```
 
 2. **Create and activate a virtual environment:**
